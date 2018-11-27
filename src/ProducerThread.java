@@ -9,16 +9,19 @@ public class ProducerThread extends Thread {
     }
 
 
-    public Thread consumer() {
-        while (threadStack.size() != 0) {
-            System.out.println(threadStack.pop());
-        }
-        return Thread.currentThread();
-    }
+//    public Thread consumer() {
+//        while (threadStack.size() != 0) {
+//            System.out.println(threadStack.pop());
+//        }
+//        return Thread.currentThread();
+//    }
 
     @Override
     public void run() {
-        consumer();
-
+//        consumer();
+        while (threadStack.size() != 0) {
+            System.out.println(threadStack.pop());
+        }
+        Thread.currentThread();
     }
 }
