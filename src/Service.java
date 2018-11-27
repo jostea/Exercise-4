@@ -11,7 +11,7 @@ public class Service implements Runnable {
     }
 
 
-    public static int[][] convertor(int[] arr,int thread) {
+    public static int[][] converter(int[] arr, int thread) {
 
         int sizeOfNewArray;
         if (arr.length % thread != 0) {
@@ -37,7 +37,6 @@ public class Service implements Runnable {
 
     @Override
     public void run() {
-
 
         int sum = 0;
         for (int i : array) {
